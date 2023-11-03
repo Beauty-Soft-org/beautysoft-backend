@@ -12,7 +12,7 @@ namespace Beautysoft.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "MensagemTemporaria",
+                name: "MensagensTemporarias",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -24,7 +24,7 @@ namespace Beautysoft.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MensagemTemporaria", x => x.Id);
+                    table.PrimaryKey("PK_MensagensTemporarias", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -102,7 +102,7 @@ namespace Beautysoft.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "MensagemTemporaria");
+                name: "MensagensTemporarias");
 
             migrationBuilder.DropTable(
                 name: "Procedimentos");

@@ -16,30 +16,30 @@ namespace Beautysoft.Services
         }
         public async Task AdicionarMensagemTemporariaAsync(MensagemTemporariaModel mensagemTemporaria)
         {
-            _context.MensagemTemporaria.Add(mensagemTemporaria);
+            _context.MensagensTemporarias.Add(mensagemTemporaria);
             await _context.SaveChangesAsync();
         }
 
 
-        public async Task<MensagemTemporariaModel> BuscarMensagemTemporariaPorIdAsync(int mensagemTemporariaId) => await _context.MensagemTemporaria.FindAsync(mensagemTemporariaId);
+        public async Task<MensagemTemporariaModel> BuscarMensagemTemporariaPorIdAsync(int mensagemTemporariaId) => await _context.MensagensTemporarias.FindAsync(mensagemTemporariaId);
 
         public async Task<List<MensagemTemporariaModel>> BuscarTodasMensagensTemporariasAsync()
         {
-            return await _context.MensagemTemporaria.ToListAsync();
+            return await _context.MensagensTemporarias.ToListAsync();
         }
 
         public async Task DeletarMensagemTemporariaAsync(int mensagemTemporariaId)
         {
-            var mensagemTemporaria = await _context.MensagemTemporaria.FindAsync(mensagemTemporariaId);
+            var mensagemTemporaria = await _context.MensagensTemporarias.FindAsync(mensagemTemporariaId);
 
-            _context.MensagemTemporaria.Remove(mensagemTemporaria);
+            _context.MensagensTemporarias.Remove(mensagemTemporaria);
             await _context.SaveChangesAsync();
         }
 
         public async Task AtualizarMensagemTemporariaAsync(int mensagemTemporariaId, MensagemTemporariaDTO mensagemTemporariaDto)
         {
 
-            var mensagemTemporaria = await _context.MensagemTemporaria.FirstOrDefaultAsync(h => h.Id == mensagemTemporariaId);
+            var mensagemTemporaria = await _context.MensagensTemporarias.FirstOrDefaultAsync(h => h.Id == mensagemTemporariaId);
             if (mensagemTemporaria != null)
             {
                 mensagemTemporaria.Nome = mensagemTemporariaDto.Nome;

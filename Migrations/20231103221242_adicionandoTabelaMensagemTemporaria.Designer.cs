@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Beautysoft.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231103214517_adicionandoTabelaMensagemTemporaria")]
+    [Migration("20231103221242_adicionandoTabelaMensagemTemporaria")]
     partial class adicionandoTabelaMensagemTemporaria
     {
         /// <inheritdoc />
@@ -95,7 +95,7 @@ namespace Beautysoft.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MensagemTemporaria");
+                    b.ToTable("MensagensTemporarias");
                 });
 
             modelBuilder.Entity("Beautysoft.Models.Procedimento", b =>
