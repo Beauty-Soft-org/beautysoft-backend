@@ -31,7 +31,6 @@ namespace BeautySoftAPI.Services
             if (usuario != null)
             {
                 usuario.NomeUsuario = usuarioDto.NomeUsuario;
-                usuario.SenhaHash = usuarioDto.Senha;
 
                 await _context.SaveChangesAsync();
             }

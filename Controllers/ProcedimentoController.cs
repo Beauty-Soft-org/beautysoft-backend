@@ -28,9 +28,9 @@ namespace Beautysoft.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Procedimento>> BuscarProcedimentoPorId(int id)
         {
-            var usuario = await _prodService.BuscarProcedimentoPorIdAsync(id);
-            if (usuario == null) return NotFound("Id não encontrado.");
-            return Ok(usuario);
+            var procedimento = await _prodService.BuscarProcedimentoPorIdAsync(id);
+            if (procedimento == null) return NotFound("Id do procedimento não encontrado.");
+            return Ok(procedimento);
         }
 
         [HttpPost]

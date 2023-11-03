@@ -11,6 +11,7 @@ namespace BeautySoftAPI.Data
 
         public DbSet<Procedimento> Procedimentos { get; set; }
         public DbSet<Voucher> Vouchers { get; set; }
+        public DbSet<MensagemTemporariaModel> MensagemTemporaria { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
