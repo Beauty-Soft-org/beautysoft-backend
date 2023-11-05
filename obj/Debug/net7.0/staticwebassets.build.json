@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "EJZOp9tSoZT/fL7wW3IYbRIdVgJJg/pMVD4h9WrJ2jQ=",
+  "Hash": "4p3X661bbV55vJSorWW0uWIhu1o4VvHfNzdSwDmqT2k=",
   "Source": "Beautysoft",
   "BasePath": "_content/Beautysoft",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Beautysoft\\wwwroot",
+      "Source": "Beautysoft",
+      "ContentRoot": "C:\\Users\\nadia\\source\\repos\\BeautysoftApi\\Beautysoft\\wwwroot\\",
+      "BasePath": "_content/Beautysoft",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

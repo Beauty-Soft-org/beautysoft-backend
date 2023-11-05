@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Beautysoft.Migrations
 {
     /// <inheritdoc />
-    public partial class adicionandoTabelaMensagemTemporaria : Migration
+    public partial class recriandoDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,7 +36,6 @@ namespace Beautysoft.Migrations
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Valor = table.Column<double>(type: "float", nullable: false),
-                    InserirArquivo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TipoProcedimento = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

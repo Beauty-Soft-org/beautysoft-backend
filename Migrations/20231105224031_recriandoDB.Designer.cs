@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Beautysoft.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231103221242_adicionandoTabelaMensagemTemporaria")]
-    partial class adicionandoTabelaMensagemTemporaria
+    [Migration("20231105224031_recriandoDB")]
+    partial class recriandoDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -107,10 +107,6 @@ namespace Beautysoft.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("InserirArquivo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

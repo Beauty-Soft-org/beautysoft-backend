@@ -3,6 +3,7 @@ using Beautysoft.Models;
 using Beautysoft.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace Beautysoft.Controllers
 {
     [Route("api/[controller]")]
@@ -10,13 +11,14 @@ namespace Beautysoft.Controllers
     public class ProcedimentoController : ControllerBase
     {
         private readonly IProcedimentoService _prodService;
+        public static IWebHostEnvironment _webHostEnvironment;
 
-        public ProcedimentoController(IProcedimentoService prodService)
+        public ProcedimentoController(IProcedimentoService prodService, IWebHostEnvironment webHostEnvironment)
         {
-            this._prodService = prodService;
+            _prodService = prodService;
+            _webHostEnvironment = webHostEnvironment;
 
         }
-
 
         [HttpGet]
         public async Task<ActionResult<List<Procedimento>>> BuscarProcedimentos()
@@ -58,5 +60,27 @@ namespace Beautysoft.Controllers
 
             return Ok("Procedimento deletado com Sucesso!");
         }
+
+        [HttpPost("upload")]
+        public async Task<IActionResult> UploadImage([FromForm] UploadImagemDto i)
+        {
+            if (i.InserirArquivo == null || i.InserirArquivo.Length == 0)
+            {
+                return BadRequest("Nenhuma imagem enviada.");
+            }
+
+            return Ok("Imagem enviada com sucesso.");
+        }
+        [HttpGet("download/{imageName}")]
+        public IActionResult DownloadImage(string imageName)
+        {
+            var imageUrl = Url.Content($"~/imagens/{imageName}");
+            return Ok(new { ImageUrl = imageUrl });
+        }
+
+
     }
 }
+
+
+
