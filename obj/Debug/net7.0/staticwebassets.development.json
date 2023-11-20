@@ -1,1 +1,1 @@
-{"ContentRoots":["C:\\Users\\nadia\\source\\repos\\BeautysoftApi\\Beautysoft\\wwwroot\\"],"Root":{"Children":null,"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}
+{"ContentRoots":["C:\\Users\\nadia\\source\\repos\\BeautysoftApi\\Beautysoft\\wwwroot\\"],"Root":{"Children":{"imagens":{"Children":{"baixados.jpeg":{"Children":null,"Asset":{"ContentRootIndex":0,"SubPath":"imagens/baixados.jpeg"},"Patterns":null}},"Asset":null,"Patterns":null}},"Asset":null,"Patterns":[{"ContentRootIndex":0,"Pattern":"**","Depth":0}]}}

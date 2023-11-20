@@ -72,19 +72,6 @@
           }
         }
       },
-      "ImageResizer/4.2.8": {
-        "type": "package",
-        "compile": {
-          "lib/net45/ImageResizer.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/ImageResizer.dll": {
-            "related": ".XML"
-          }
-        }
-      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.11": {
         "type": "package",
         "dependencies": {
@@ -1346,19 +1333,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "ImageResizer/4.2.8": {
-      "sha512": "3OZKxlsyYr9Zxsz0KwXJ5S749azmjcPV4B344ssR/3oneEY6ZdTawDPochD4Z4RHBs4bYBf592lVhmEngxtZ7g==",
-      "type": "package",
-      "path": "imageresizer/4.2.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "imageresizer.4.2.8.nupkg.sha512",
-        "imageresizer.nuspec",
-        "lib/net45/ImageResizer.XML",
-        "lib/net45/ImageResizer.dll"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/7.0.11": {
@@ -3352,7 +3326,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "BCrypt.Net-Next >= 4.0.3",
-      "ImageResizer >= 4.2.8",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.11",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
@@ -3407,10 +3380,6 @@
           "BCrypt.Net-Next": {
             "target": "Package",
             "version": "[4.0.3, )"
-          },
-          "ImageResizer": {
-            "target": "Package",
-            "version": "[4.2.8, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -3479,17 +3448,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "O pacote 'ImageResizer 4.2.8' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "libraryId": "ImageResizer",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  }
 }

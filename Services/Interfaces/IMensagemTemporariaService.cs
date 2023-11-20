@@ -5,9 +5,9 @@ namespace Beautysoft.Services.Interfaces
 {
     public interface IMensagemTemporariaService
     {
-        Task<List<MensagemTemporariaModel>> BuscarTodasMensagensTemporariasAsync();
-        Task<MensagemTemporariaModel> BuscarMensagemTemporariaPorIdAsync(int mensagemTemporariaId);
-        Task AdicionarMensagemTemporariaAsync(MensagemTemporariaModel mensagemTemporaria);
+        Task<List<MensagemTemporaria>> BuscarTodasMensagensTemporariasAsync();
+        Task<MensagemTemporaria> BuscarMensagemTemporariaPorIdAsync(int mensagemTemporariaId);
+        Task AdicionarMensagemTemporariaAsync(MensagemTemporaria mensagemTemporaria);
         Task AtualizarMensagemTemporariaAsync(int mensagemTemporariaId, MensagemTemporariaDTO mensagemTemporariaDto);
         Task DeletarMensagemTemporariaAsync(int mensagemTemporariaId);
     }

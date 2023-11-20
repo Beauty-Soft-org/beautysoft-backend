@@ -1,4 +1,6 @@
-﻿using BeautySoftAPI.DTOs;
+﻿using Beautysoft.DTOs;
+using Beautysoft.Models;
+using BeautySoftAPI.DTOs;
 using BeautySoftAPI.Models;
 
 namespace BeautySoftAPI.Services.Interfaces
@@ -7,8 +9,10 @@ namespace BeautySoftAPI.Services.Interfaces
     {
         Task<List<Usuario>> BuscarTodosUsuariosAsync();
         Task<Usuario> BuscarUsuarioPorIdAsync(int usuarioId);
-        Task AdicionarUsuarioAsync(Usuario usuario);
         Task AtualizarUsuarioAsync(int usuario, UsuarioDto usuarioDTO);
         Task DeletarUsuarioAsync(int usuarioId);
+
+        Task<RegistroDto> RegistrarUsuarioAsync(RegistroDto registro);
+        Task<Usuario> AutenticarUsuario(string email, string senha);
     }
 }

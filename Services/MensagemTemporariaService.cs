@@ -14,16 +14,16 @@ namespace Beautysoft.Services
         {
             _context = context;
         }
-        public async Task AdicionarMensagemTemporariaAsync(MensagemTemporariaModel mensagemTemporaria)
+        public async Task AdicionarMensagemTemporariaAsync(MensagemTemporaria mensagemTemporaria)
         {
             _context.MensagensTemporarias.Add(mensagemTemporaria);
             await _context.SaveChangesAsync();
         }
 
 
-        public async Task<MensagemTemporariaModel> BuscarMensagemTemporariaPorIdAsync(int mensagemTemporariaId) => await _context.MensagensTemporarias.FindAsync(mensagemTemporariaId);
+        public async Task<MensagemTemporaria> BuscarMensagemTemporariaPorIdAsync(int mensagemTemporariaId) => await _context.MensagensTemporarias.FindAsync(mensagemTemporariaId);
 
-        public async Task<List<MensagemTemporariaModel>> BuscarTodasMensagensTemporariasAsync()
+        public async Task<List<MensagemTemporaria>> BuscarTodasMensagensTemporariasAsync()
         {
             return await _context.MensagensTemporarias.ToListAsync();
         }

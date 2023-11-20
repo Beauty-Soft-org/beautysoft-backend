@@ -1,8 +1,7 @@
-﻿namespace Beautysoft.DTOs
+﻿namespace Beautysoft.Models
 {
-    public class UploadImagemDto
+    public class Upload
     {
-
         public IFormFile InserirArquivo { get; set; }
     }
 }

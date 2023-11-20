@@ -62,21 +62,30 @@ namespace Beautysoft.Controllers
         }
 
         [HttpPost("upload")]
-        public async Task<IActionResult> UploadImage([FromForm] UploadImagemDto i)
+        public async Task<ActionResult> UploadImage([FromForm] Procedimento i)
         {
+            if (i.InserirArquivo.Length > 0)
+            {
+                string path = _webHostEnvironment.WebRootPath + "\\imagens\\";
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                using (FileStream fileStream = System.IO.File.Create(path + i.InserirArquivo.FileName))
+                {
+                    i.InserirArquivo.CopyTo(fileStream);
+                    fileStream.Flush();
+                    return Ok("Upload Done.");
+                }
+            }
             if (i.InserirArquivo == null || i.InserirArquivo.Length == 0)
             {
-                return BadRequest("Nenhuma imagem enviada.");
+                return BadRequest("Falha ao enviar imagem.");
             }
 
             return Ok("Imagem enviada com sucesso.");
         }
-        [HttpGet("download/{imageName}")]
-        public IActionResult DownloadImage(string imageName)
-        {
-            var imageUrl = Url.Content($"~/imagens/{imageName}");
-            return Ok(new { ImageUrl = imageUrl });
-        }
+        
 
 
     }

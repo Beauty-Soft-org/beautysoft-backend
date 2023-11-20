@@ -18,14 +18,14 @@ namespace Beautysoft.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<MensagemTemporariaModel>>> BuscarTodasMensagensTemporarias()
+        public async Task<ActionResult<List<MensagemTemporaria>>> BuscarTodasMensagensTemporarias()
         {
             var mensagemTemporarias = await _mtService.BuscarTodasMensagensTemporariasAsync();
             return Ok(mensagemTemporarias);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<MensagemTemporariaModel>> BuscarMensagemTemporariaPorId(int id)
+        public async Task<ActionResult<MensagemTemporaria>> BuscarMensagemTemporariaPorId(int id)
         {
             var usuario = await _mtService.BuscarMensagemTemporariaPorIdAsync(id);
             if (usuario == null) return NotFound("Id não encontrado.");
@@ -33,7 +33,7 @@ namespace Beautysoft.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<MensagemTemporariaModel>> AdicionarMensagemTemporaria([FromBody] MensagemTemporariaModel mensagemTemporaria)
+        public async Task<ActionResult<MensagemTemporaria>> AdicionarMensagemTemporaria([FromBody] MensagemTemporaria mensagemTemporaria)
         {
             await _mtService.AdicionarMensagemTemporariaAsync(mensagemTemporaria);
             return CreatedAtAction(nameof(BuscarMensagemTemporariaPorId), new { id = mensagemTemporaria.Id }, mensagemTemporaria);

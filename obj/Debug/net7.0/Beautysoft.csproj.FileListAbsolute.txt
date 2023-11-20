@@ -77,4 +77,3 @@ C:\Users\nadia\source\repos\BeautysoftApi\Beautysoft\obj\Debug\net7.0\ref\Beauty
 C:\Users\nadia\source\repos\BeautysoftApi\Beautysoft\bin\Debug\net7.0\BCrypt.Net-Next.dll
 C:\Users\nadia\source\repos\BeautysoftApi\Beautysoft\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\nadia\source\repos\BeautysoftApi\Beautysoft\bin\Debug\net7.0\Beautysoft.staticwebassets.runtime.json
-C:\Users\nadia\source\repos\BeautysoftApi\Beautysoft\bin\Debug\net7.0\ImageResizer.dll
