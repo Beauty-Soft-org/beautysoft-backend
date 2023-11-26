@@ -13,8 +13,6 @@ namespace Beautysoft.Models
         public double Valor { get; set; } 
         public TipoProc TipoProcedimento { get; set; }
 
-        [NotMapped]
-        public required IFormFile InserirArquivo { get; set; }
 
 
     }

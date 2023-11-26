@@ -62,7 +62,7 @@ namespace Beautysoft.Controllers
         }
 
         [HttpPost("upload")]
-        public async Task<ActionResult> UploadImage([FromForm] Procedimento i)
+        public async Task<ActionResult> UploadImage([FromForm] Upload i)
         {
             if (i.InserirArquivo.Length > 0)
             {

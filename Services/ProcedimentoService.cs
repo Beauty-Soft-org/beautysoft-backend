@@ -32,7 +32,6 @@ namespace Beautysoft.Services
                 procedimento.Nome = procedimentoDto.Nome;
                 procedimento.Descricao = procedimentoDto.Descricao;
                 procedimento.Valor = procedimentoDto.Valor;
-               // procedimento.InserirArquivo = procedimentoDto.InserirArquivo;
                 procedimento.TipoProcedimento = procedimentoDto.TipoProcedimento;
 
                 await _context.SaveChangesAsync();

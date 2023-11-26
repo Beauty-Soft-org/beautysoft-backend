@@ -1,7 +1,11 @@
-﻿namespace Beautysoft.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Beautysoft.Models
 {
     public class Upload
     {
-        public IFormFile InserirArquivo { get; set; }
+
+        [NotMapped]
+        public required IFormFile InserirArquivo { get; set; }
     }
 }
