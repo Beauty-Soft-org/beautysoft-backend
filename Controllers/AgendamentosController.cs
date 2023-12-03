@@ -35,5 +35,21 @@ namespace Beautysoft.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<bool>> CancelarAgendamento(int id)
+        {
+            try
+            {
+                var result = await _agendamentoService.CancelarAgendamento(id);
+
+                if (result)return Ok(true);
+                else return NotFound(false); 
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+ZUyblEazIxmp01il0UESpT8+jVbSW/NqAm2GT/kNAQ=",
+  "Hash": "SQifmSvanJGHCoDKpx5OZWI1mpCjDNyfDA16zCFI704=",
   "Source": "Beautysoft",
   "BasePath": "_content/Beautysoft",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\imagens\\baixados.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\nadia\\source\\repos\\BeautysoftApi\\Beautysoft\\wwwroot\\imagens\\ImgDBS.png",
+      "SourceId": "Beautysoft",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nadia\\source\\repos\\BeautysoftApi\\Beautysoft\\wwwroot\\",
+      "BasePath": "_content/Beautysoft",
+      "RelativePath": "imagens/ImgDBS.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagens\\ImgDBS.png"
     }
   ]
 }

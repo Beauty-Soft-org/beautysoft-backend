@@ -6,5 +6,6 @@ namespace Beautysoft.Services.Interfaces
     {
         Task<List<Agendamento>> ObterTodosAgendamentos();
         Task<Agendamento> CadastrarAgendamento(Agendamento agendamento);
+        Task<bool> CancelarAgendamento(int agendamentoId);
     }
 }

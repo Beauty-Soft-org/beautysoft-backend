@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\nadia\\source\\repos\\BeautysoftApi\\Beautysoft\\wwwroot\\imagens\\ImgDBS.png",
+      "PackagePath": "staticwebassets\\imagens\\ImgDBS.png"
+    },
+    {
       "Id": "C:\\Users\\nadia\\source\\repos\\BeautysoftApi\\Beautysoft\\wwwroot\\imagens\\baixados.jpeg",
       "PackagePath": "staticwebassets\\imagens\\baixados.jpeg"
     },

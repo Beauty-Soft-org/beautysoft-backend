@@ -26,5 +26,15 @@ namespace Beautysoft.Services
             return await _context.Agendamentos.ToListAsync();
 
         }
+        public async Task<bool> CancelarAgendamento(int agendamentoId)
+        {
+            var agendamento = await _context.Agendamentos.FindAsync(agendamentoId);
+
+            if (agendamento == null)return false; 
+
+            _context.Agendamentos.Remove(agendamento);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }
